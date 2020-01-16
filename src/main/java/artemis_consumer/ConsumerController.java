@@ -9,9 +9,8 @@ public class ConsumerController {
     @Autowired
     ArtemisConsumer artemisConsumer;
 
-    @RequestMapping(value = "/receive")
+    @RequestMapping(value = "/")
     public String receive(String msg){
-        artemisConsumer.receive(msg);
-        return "Message received successfully";
+        return "Ready for listening the messages: ";
     }
 }
