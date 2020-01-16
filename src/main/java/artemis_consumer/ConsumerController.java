@@ -6,11 +6,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class ConsumerController {
-    @Autowired
-    ArtemisConsumer artemisConsumer;
-
     @RequestMapping(value = "/")
-    public String receive(String msg){
+    public String receive(){
         return "Ready for listening the messages: ";
     }
 }
